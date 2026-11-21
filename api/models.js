@@ -1,0 +1,1 @@
+const {configured}=require("./_providers");module.exports=(req,res)=>{res.setHeader("Cache-Control","no-store");res.status(200).json({providers:configured().map(({id,name,model})=>({id,name,model}))});};
